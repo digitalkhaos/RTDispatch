@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,18 @@ namespace RTDispatch
         public Form1()
         {
             InitializeComponent();
+
+            //Connect to databases
+            using(SqlConnection connection = new SqlConnection())
+            {
+                SqlCommand
+            }
+
+            //Connect to customer database
+
+            //connect to operations database
+
+            //connect to 
         }
     }
 }
