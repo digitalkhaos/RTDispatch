@@ -18,9 +18,18 @@ namespace RTDispatch
             InitializeComponent();
 
             //Connect to databases
-            using(SqlConnection connection = new SqlConnection())
+
+            //connection string
+            string connection_string = "Server = tcp:wolfden.database.windows.net,1433; Initial Catalog = RTDispatch; Persist Security Info = False; User ID = john; Password ={ your_password}; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30";
+            string query_string = "SELECT * FROM dbo.RTcustomers";
+
+            using (SqlConnection connection = new SqlConnection(connection_string))
             {
-                SqlCommand
+                using (SqlCommand command = new SqlCommand(query_string, connection))
+                {
+                    DataTable customerTable = new DataTable("AllCustomers");
+
+                }
             }
 
             //Connect to customer database
